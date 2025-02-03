@@ -29,7 +29,7 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
             const img = card.querySelector(".immagine-galleria");
             img.addEventListener("click", () => {
                 immagineCover.src = item.url;
-                cover.classList.add("attivo");
+                cover.style.display = "flex";
             });
 
         });
@@ -39,11 +39,11 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
     .catch(error => console.error(error));
 
     chiudiCover.addEventListener("click", () => {
-        cover.classList.remove("attivo");
+        cover.style.display = "none";
     });
     
     cover.addEventListener("click", (e) => {
         if (e.target === cover) {
-            cover.classList.remove("attivo");
+            cover.style.display = "none";
         }
     });

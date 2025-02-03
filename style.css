@@ -29,14 +29,11 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out;
+    display: none;
 }
-
+    
 .cover.attivo {
-    opacity: 1;
-    visibility: visible;
+    display: flex;
 }
 
 .cover img {
