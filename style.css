@@ -1,6 +1,20 @@
+body {
+    background: url('./img/cork.png') repeat;
+}
+
 h1 {
     font-family: 'Edu TAS Beginner', sans-serif;
+    font-size: 4rem !important;
+    font-weight: bold !important;
 }
+
 .card-text {
     font-family: 'Sometype Mono', monospace;
+    font-style: italic;
+    /* font-size: 1rem; */
+}
+
+.header {
+    background: url('./img/wall.png') repeat;
+    padding: 40px 0;
 }
