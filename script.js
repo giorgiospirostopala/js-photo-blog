@@ -16,7 +16,7 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
 
             card.innerHTML = `
                 <div class="card">
-                    <img src="${item.url}" class="card-img-top" alt="${item.title}">
+                    <img src="${item.url}" class="card-img-top immagine-galleria" alt="${item.title}">
                     <div class="card-body">
                         <h5 class="card-title">${item.title}</h5>
                         <p class="card-text">${item.date}</p>
