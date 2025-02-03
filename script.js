@@ -1,10 +1,14 @@
 const galleryContainer = document.querySelector(".gallery");
 
+const cover = document.getElementById("cover");
+const immagineCover = document.getElementById("immagine-cover");
+const chiudiCover = document.getElementById("chiudi-cover");
+
 fetch("https://lanciweb.github.io/demo/api/pictures/")
 
     .then(response => response.json())
     .then(data => {
-        console.log("Dati ricevuti:", data);
+        console.log(data);
 
         data.forEach(item => {
             const card = document.createElement("div");
@@ -22,8 +26,24 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
 
             galleryContainer.appendChild(card);
 
+            const img = card.querySelector(".immagine-galleria");
+            img.addEventListener("click", () => {
+                immagineCover.src = item.url;
+                cover.classList.add("attivo");
+            });
+
         });
 
     })
+
+    .catch(error => console.error(error));
+
+    chiudiCover.addEventListener("click", () => {
+        cover.classList.remove("attivo");
+    });
     
-    .catch(error => console.error("Errore nella richiesta:", error));
+    cover.addEventListener("click", (e) => {
+        if (e.target === cover) {
+            cover.classList.remove("attivo");
+        }
+    });

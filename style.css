@@ -18,3 +18,50 @@ h1 {
     background: url('./img/wall.png') repeat;
     padding: 40px 0;
 }
+
+.cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.cover.attivo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cover img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.chiudi-cover {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.immagine-galleria {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.immagine-galleria:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
