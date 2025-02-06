@@ -18,6 +18,9 @@ fetch("https://lanciweb.github.io/demo/api/pictures/") //!  ovvero " fetch("url"
             const card = document.createElement("div");
             card.classList.add("col-md-4", "mb-4");
 
+            // const {title} = oggetto; //! RIPASSA SINTASSI DESTRUCTURING
+
+            // 
             card.innerHTML = `
                 <div class="card">
                     <img src="${oggetto.url}" class="card-img-top immagine-galleria" alt="pic">
@@ -48,11 +51,11 @@ fetch("https://lanciweb.github.io/demo/api/pictures/") //!  ovvero " fetch("url"
     });
     
     //! se lasciassi così, anche cliccando sull'immagine otterrei il d-none
-    cover.addEventListener("click", () => {
-        cover.style.display = "none";
-    });
+    // cover.addEventListener("click", () => {
+    //     cover.style.display = "none";
+    // });
 
-    //* quindi uso .target in un if perché è il “bersaglio” effettivo dell’evento
+    //* quindi uso .target nell'if perché è il “bersaglio” effettivo dell’evento
     cover.addEventListener("click", (evento) => {
         if (evento.target === cover) {         //// se il target del mio evento coincide con "cover" allora:
             cover.style.display = "none";
